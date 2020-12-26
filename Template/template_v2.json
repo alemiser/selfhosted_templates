@@ -2735,7 +2735,7 @@
 				}
 			],
 			"image": "ghcr.io/linuxserver/code-server:latest",
-			"logo": "https://github.com/alemiser/selfhosted_templates/raw/Swag/Images/code-server-logo.png",
+			"logo": "https://github.com/alemiser/selfhosted_templates/raw/Swag/Images/code-server.png",
 			"platform": "linux",
 			"ports": [
 				"8443/tcp"
