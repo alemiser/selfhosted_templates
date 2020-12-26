@@ -246,7 +246,7 @@
 		},
 		{
 			"categories": [
-				"HomeAutomation:",
+				"HomeAutomation",
 				"Management"
 			],
 			"description": "Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device",
@@ -1998,7 +1998,7 @@
 		},
 		{
 			"categories": [
-				"Backup:",
+				"Backup",
 				"Cloud",
 				"Other",
 				"Productivity",
@@ -2694,6 +2694,57 @@
 			"volumes": [
 				{
 					"container": "/var/www/html/images"
+				}
+			]
+        },
+		{
+			"categories": [
+				"Programmer",
+				"Tools",
+				"Code"
+			],
+			"description": "Code-server is VS Code running on a remote server, accessible through the browser.",
+			"env": [
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"default": "1000"
+				},
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"default": "1000"
+				},
+				{
+                    "label": "Password",
+                    "name": "PASSWORD",
+					"description": "Optional web gui password, if not provided, there will be no auth",
+					"default": ""
+				},
+				{
+					"label": "Sudo Password",
+                    "name": "SUDO_PASSWORD",
+                    "description": "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password.",
+					"default": ""
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+                    "description": "Time zone",
+					"default": "America/Chicago"
+				}
+			],
+			"image": "ghcr.io/linuxserver/code-server:latest",
+			"logo": "https://github.com/alemiser/selfhosted_templates/raw/Swag/Images/code-server-logo.png",
+			"platform": "linux",
+			"ports": [
+				"8443/tcp"
+			],
+			"title": "Code-Server",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/config"
 				}
 			]
 		}
